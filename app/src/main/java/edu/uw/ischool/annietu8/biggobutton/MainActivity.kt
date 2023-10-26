@@ -19,8 +19,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun clickButton() {
         clickCount++
-        val phrase = "$clickCount time${if (clickCount == 1) "" else "s"}!"
-        val newText: String = getString(R.string.counter_text, phrase)
+        val word = "time${if (clickCount == 1) "" else "s"}!"
+        val newText: String = getString(R.string.counter_text, clickCount, word)
         button.text = newText
     }
 }
